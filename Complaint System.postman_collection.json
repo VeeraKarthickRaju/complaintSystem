@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "11987efe-1861-4bcb-a7ba-bca321955c83",
+		"name": "Complaint System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\": \"Veera\",\r\n    \"password\": \"veera123karthick\",\r\n    \"mobile\": 9940720359,\r\n    \"role\": \"agent\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				},
+				"description": "Registration"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/login?userID=karthick&password=veera123karthick&role=agent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "userID",
+							"value": "karthick"
+						},
+						{
+							"key": "password",
+							"value": "veera123karthick"
+						},
+						{
+							"key": "role",
+							"value": "agent"
+						}
+					]
+				},
+				"description": "Login"
+			},
+			"response": []
+		},
+		{
+			"name": "Register Complaint",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\": \"veera\",\r\n    \"deviceModel\": \"Samsung Galaxy\",\r\n    \"manufacturer\": \"Samsung\",\r\n    \"problem\": \"bla\",\r\n    \"description\": \"bla bla bla\",\r\n    \"status\": \"Open\",\r\n    \"dateCreated\": \"14-2-2021\",\r\n    \"agentID\": \"\",\r\n    \"agentName\": \"\",\r\n    \"fixDesc\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/complaint",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"complaint"
+					]
+				},
+				"description": "Register Complaint"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Complaints",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/complaints?userID=veera",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"complaints"
+					],
+					"query": [
+						{
+							"key": "userID",
+							"value": "veera"
+						}
+					]
+				},
+				"description": "Get All Complaint"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Complaint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/complaint/1003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"complaint",
+						"1003"
+					]
+				},
+				"description": "Get All Complaint"
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Complaint",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\": \"veera\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/complaint/1002/assign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"complaint",
+						"1002",
+						"assign"
+					]
+				},
+				"description": "Assign Complaint"
+			},
+			"response": []
+		},
+		{
+			"name": "Fix Compliant",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fixDesc\": \"bla bla\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/complaint/1002/fix",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"complaint",
+						"1002",
+						"fix"
+					]
+				},
+				"description": "Fix Compliant"
+			},
+			"response": []
+		}
+	]
+}

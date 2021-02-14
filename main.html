@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Main</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+
+		<header>
+			<div class="float-left w-25">
+				<div class="text-left"><img src="images/logo.png" alt="Company Logo" class="logoScale"></div>
+			</div>
+			<div class="float-left pt-2 w-50">
+				<div class="text-center">
+					<span class="txtShdow WL-txt">You logged in as <span id="role"></span> </span>
+				</div>
+			</div>
+			<div class="float-left w-25 pt-3">
+				<div class="text-right">
+					<span class="algnAvatar">
+						<img src="images/avatar2.png" alt="User Photograph" class="avatar">
+					</span>
+					<div class="btn-group text-white ">
+						<button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">
+							<span class="btnSM" id="userNameBtn">Login User</span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right">
+							<button class="dropdown-item" type="button" tabindex="90" onclick="logOutUser()"
+								id="logOutBtn">Logout</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="clearfix"></div>
+		<div class="container-fluid">
+			<!--container-fluid start-->
+			<div class="row no-gutters">
+				<div class="col-lg-2 leftColNav">
+					<!--Left Navigation Start-->
+					<ul class="sideMenu">
+						<li class="sideMenu-item"><a href="home.html" class="sideMenu-item-home" title="Home"
+								tabindex="10"><span class="sideMenu-item-label">Home</span></a></li>
+						<li class="sideMenu-item"><a href="main.html" class="sideMenu-item-deal active"
+								title="Register compliant" tabindex="30"><span class="sideMenu-item-label">Register
+									compliant</span></a></li>
+					</ul>
+				</div>
+				<!--Left Navigation End-->
+
+				<div class="col-lg-10">
+					<!--Right content area Start-->
+					<div class="pdgWrap">
+						<h3>Register a compliant</h3>
+						<div class="whiteBigWell">
+							<div class="row">
+								<p class="text-information">Note: Fields marked with (<span class="mandate">*</span>)
+									are mandatory. Please fill all the mandatory fields</p>
+							</div>
+							<div class="hdgBG-WL">Complaint information</div>
+							Details of the fields to be captured for the compliant will come here.
+						</div>
+						<button type="button" class="btn btn-primary mr-1" data-toggle="modal" tabindex="50"
+							id="predictBtn">Register Complaint</button>
+					</div>
+				</div>
+				<!--Right content area End-->
+			</div>
+		</div>
+		<!--container-fluid end-->
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src=" https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

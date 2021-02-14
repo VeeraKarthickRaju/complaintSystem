@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row boxLogin no-gutters">
+			<div class="col-lg-6 grad">
+				<div class="logoBig">
+					<div class="logoCont">
+					</div>
+					<div class="hdgCont">
+						<h4 class="txtShdow">CR
+							<br />
+							<span class="font-italic">System</span>
+						</h4>
+						<p class="txtShdow">Powered by Trimble</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 logCont">
+				<div class="p-5">
+					<h2 class="txtBlue">Login</h2>
+					<form>
+						<div class="form-group mt-3">
+							<label for="userid">User ID:</label>
+							<input class="form-control" id="userid" placeholder="Your UserID">
+						</div>
+						<div class="form-group">
+							<label for="pwd">Password:</label>
+							<input type="password" class="form-control" id="pwd" placeholder="Password">
+						</div>
+						<div class="form-group mobNo">
+							<label for="pwd">Mobile:</label>
+							<input type="number" class="form-control" id="mobNo" placeholder="Mobile number">
+						</div>
+						<div class="dropdown">
+							<label for="role">Select your role:</label>
+							<select name="role" id="role">
+								<option value="select">Select</option>
+								<option value="agent">Agent</option>
+								<option value="user">User</option>
+							</select>
+						</div>
+						<button type="button" class="btn btn-primary mt-2 register" onclick='registerUser()'>Register
+						</button>
+						<button type="button" class="btn btn-primary mt-2" onclick='loginUser()'>Login </button>
+						<button type="button" class="btn btn-primary mt-2 signup" onclick='signUp()'>Sign Up
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Login Failure Modal-->
+	<div class="modal" id="loginFail" tabindex="-2" role="dialog" aria-labelledby="exampleModalVerticalLabel1"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="exampleModalVerticalLabel1">Login Error</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<h5 class="text-center text-danger font-weight-bold failure"></h5>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.cookie.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src=" https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+	<script src="js/login.js"></script>
+
+</body>
+
+</html>
